@@ -1,19 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Root from './root/index';
-import "antd/dist/antd.css";
-import { ColorProvider } from './context/color';
-import {BrowserRouter } from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { DarkModeContextProvider } from "./context/darkModeContext";
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <ColorProvider>
-      <Root />
-    </ColorProvider>
-    </BrowserRouter>
+    <DarkModeContextProvider>
+      <App />
+    </DarkModeContextProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-
